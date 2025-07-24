@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarjeta de Presentación</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">
+      <img src="https://i.pravatar.cc/150?img=32" alt="Foto de perfil">
+    </div>
+    <h1>Ryo</h1>
+    <p class="title">Ingeniería en Informática</p>
+    <p>Contacto: ryofix6@gmail.com</p>
+    <div class="buttons">
+      <a href="https://api.whatsapp.com/send/?phone=%2B56931243202&text=Hola!&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
+      <a href="https://github.com" target="_blank">email</a>
+    </div>
+    <button id="darkModeBtn">Modo Oscuro 🌙</button>
+
+    <button id="toggleFormBtn">Contactarme 📬</button>
+
+<div id="formContainer" class="hidden">
+  <form action="https://formsubmit.co/tu-correo@email.com" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <textarea name="message" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://tu-sitio.github.io/gracias.html">
+
+    <button type="submit">Enviar mensaje 📩</button>
+  </form>
+</div>
+
+  </div>
+</body>
+</html>
