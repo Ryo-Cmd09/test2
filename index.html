@@ -3,39 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarjeta de Presentación</title>
+  <title>Macarena Díaz</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="card">
     <div class="avatar">
-      <img src="https://i.pravatar.cc/150?img=32" alt="Foto de perfil">
+      <img src="Pink Aesthetic Boutique Logo.png" alt="Foto de perfil">
     </div>
-    <h1>Ryo</h1>
-    <p class="title">Ingeniería en Informática</p>
-    <p>Contacto: ryofix6@gmail.com</p>
+    <h1>Macarena Díaz</h1>
+    <p class="subtitle">Hoy, elige cuidar de ti mismo</p>
+    <p class="title">Psicóloga Clinica</p>
     <div class="buttons">
       <a href="https://api.whatsapp.com/send/?phone=%2B56931243202&text=Hola!&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
     </div>
     <button id="darkModeBtn">Modo Oscuro 🌙</button>
 
     <button id="toggleFormBtn">Contactarme 📬</button>
+    
+    <button id="toggleSpecialtiesBtn" class="toggle-btn">
+      Mis Especialidades <i class="fas fa-chevron-down"></i>
+    </button>
+    
+    <div id="specialtiesContainer" class="hidden">
+      <div class="specialties">
+        <ul class="specialties-list">
+          <li><i class="fas fa-brain"></i> Terapia Cognitivo Conductual</li>
+          <li><i class="fas fa-users"></i> Psicoterapia individual, familiar y grupal</li>
+          <li><i class="fas fa-clipboard-check"></i> Psicodiagnóstico</li>
+          <li><i class="fas fa-heart"></i> Trastornos del ánimo y ansiedad</li>
+          <li><i class="fas fa-first-aid"></i> Intervención en crisis</li>
+          <li><i class="fas fa-prescription-bottle-alt"></i> Consumo problemático de alcohol y otras drogas</li>
+          <li><i class="fas fa-child"></i> Atención a población adulta e infanto-juvenil</li>
+          <li><i class="fas fa-memory"></i> Neuropsicología clínica</li>
+          <li><i class="fas fa-hand-holding-heart"></i> Abordaje en trauma y violencia</li>
+        </ul>
+      </div>
+    </div>
 
-<div id="formContainer" class="hidden">
-  <form action="https://formsubmit.co/tu-correo@email.com" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Tu nombre" required>
-    <input type="email" name="email" placeholder="Tu correo" required>
-    <textarea name="message" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+    <div id="formContainer" class="hidden">
+      <form action="https://formsubmit.co/tu-correo@email.com" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+        
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://tu-sitio.github.io/gracias.html">
 
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://tu-sitio.github.io/gracias.html">
-
-    <button type="submit">Enviar mensaje 📩</button>
-  </form>
-</div>
-
+        <button type="submit">Enviar mensaje 📩</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>

@@ -16,7 +16,7 @@ body {
   text-align: center;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, color 0.3s ease;
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
 }
 
@@ -45,16 +45,47 @@ body {
   background: #574fe1;
 }
 
-#darkModeBtn {
+/* Botones generales */
+#darkModeBtn, #toggleFormBtn, .toggle-btn {
   margin-top: 1rem;
-  background: #222;
-  color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
+#darkModeBtn {
+  background: #222;
+  color: white;
+}
+
+#toggleFormBtn {
+  background: #ff8c42;
+  color: white;
+}
+
+.toggle-btn {
+  background: #6c63ff;
+  color: white;
+}
+
+/* Hover estados */
+#toggleFormBtn:hover {
+  background: #e57b34;
+}
+
+.toggle-btn:hover {
+  background: #574fe1;
+}
+
+/* Modo oscuro */
 body.dark {
   background: #121212;
 }
@@ -77,39 +108,35 @@ body.dark #darkModeBtn {
   color: #121212;
 }
 
-#toggleFormBtn {
-  margin-top: 1rem;
-  background: #ff8c42;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
+body.dark .toggle-btn {
+  background: #bb86fc;
+  color: #121212;
 }
 
-#toggleFormBtn:hover {
-  background: #e57b34;
+body.dark .toggle-btn:hover {
+  background: #a370d4;
 }
 
-#formContainer {
+/* Contenedores expandibles */
+#formContainer, #specialtiesContainer {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: all 0.5s ease;
 }
 
-#formContainer.show {
-  max-height: 500px;
+#formContainer.show, #specialtiesContainer.show {
+  max-height: 1000px;
   opacity: 1;
   margin-top: 1rem;
 }
 
+/* Formulario */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   width: 100%;
-  max-width: 100%;
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -148,4 +175,73 @@ body.dark #darkModeBtn {
 
 .contact-form button:hover {
   background-color: #574fe1;
+}
+
+/* Especialidades */
+.specialties {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.specialties-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.specialties-list li {
+  padding: 0.8rem;
+  background: rgba(108, 99, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.specialties-list li:hover {
+  transform: translateY(-2px);
+  background: rgba(108, 99, 255, 0.15);
+}
+
+.specialties-list li i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Iconos de flecha */
+.toggle-btn i {
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn.active i {
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .specialties-list li {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
 }
